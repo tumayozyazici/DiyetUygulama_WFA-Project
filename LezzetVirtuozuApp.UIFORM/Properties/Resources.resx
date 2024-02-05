@@ -121,6 +121,12 @@
   <data name="member-card_7186404 enbüyük1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\member-card_7186404 enbüyük1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="user-3296" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\user-3296.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fatman" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fatman.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="food-385 32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\food-385 32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -132,9 +138,6 @@
   </data>
   <data name="member-card_7186404 (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\member-card_7186404 (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="food-385 2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\food-385 2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="food-385" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\food-385.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -148,8 +151,11 @@
   <data name="food-385 64" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\food-385 64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="user-3296" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\user-3296.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="food-385 2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\food-385 2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fatgirl" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fatgirl.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="portakal" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\portakal.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -157,10 +163,10 @@
   <data name="member-card_7186404 (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\member-card_7186404 (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="fatgirl" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fatgirl.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="menu32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\net6.0-windows\Pictures\menu32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="fatman" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fatman.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="useradddelete" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\net6.0-windows\Pictures\useradddelete.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -123,6 +123,7 @@
             btnGiris.TabIndex = 10;
             btnGiris.Text = "Giriş";
             btnGiris.UseVisualStyleBackColor = true;
+            btnGiris.Click += btnGiris_Click;
             // 
             // txtSifre
             // 

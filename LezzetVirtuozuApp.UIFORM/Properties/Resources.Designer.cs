@@ -153,6 +153,16 @@ namespace LezzetVirtuozuApp.UIFORM.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap menu32 {
+            get {
+                object obj = ResourceManager.GetObject("menu32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap person_12862 {
             get {
                 object obj = ResourceManager.GetObject("person-12862", resourceCulture);
@@ -196,6 +206,16 @@ namespace LezzetVirtuozuApp.UIFORM.Properties {
         internal static System.Drawing.Bitmap user_3296 {
             get {
                 object obj = ResourceManager.GetObject("user-3296", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap useradddelete {
+            get {
+                object obj = ResourceManager.GetObject("useradddelete", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

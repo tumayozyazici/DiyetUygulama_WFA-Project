@@ -29,9 +29,6 @@ namespace LezzetVirtuozuApp.UIFORM
             Application.Exit();
         }
 
-
-
-
         private void pbKilitFoto_Click(object sender, EventArgs e)
         {
             if (txtSifre.UseSystemPasswordChar == true)

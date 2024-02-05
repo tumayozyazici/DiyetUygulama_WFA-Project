@@ -18,5 +18,7 @@ namespace DiyetUygulama.SERVICE.Interfaces
         Meal GetMeal(Meals meal, int memberId);
 
         Meal GetMealByMealIdDate(Meals meal, int memberId, DateTime date);
+        bool IsThereAnyWithMealDate(Meals meal, int memberId);
+        List<int> GetMealIdListByMealTypeDateID(Meals meal, int memberId);
     }
 }

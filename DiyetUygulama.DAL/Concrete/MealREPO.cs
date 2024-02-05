@@ -25,12 +25,17 @@ namespace DiyetUygulama.DAL.Concrete
 
         public Meal GetMealByMealIdDate(Meals meal, int memberId, DateTime date)
         {
-            return db.Meals.FirstOrDefault(x => x.MealType == meal & x.MemberId ==memberId & x.MealDate.Date == date);
+            return db.Meals.FirstOrDefault(x => x.MealType == meal & x.MemberId == memberId & x.MealDate.Date == date);
         }
 
-        public bool IsThereAnyWithMealDate(Meals meal)
+        public List<int> GetMealIdListByMealTypeDateID(Meals meal,int memberId)
         {
-            return db.Meals.Any(x => x.MealType == meal && x.MealDate.Date == DateTime.Now.Date);
+            return db.Meals.Where(m => m.MealType == meal & m.MemberId == memberId & m.MealDate.Date == DateTime.Now.Date).Select(m => m.MealId).ToList();
+        }
+
+        public bool IsThereAnyWithMealDate(Meals meal, int memberId)
+        {
+            return db.Meals.Any(x => x.MealType == meal && x.MemberId ==memberId && x.MealDate.Date == DateTime.Now.Date);
         }
     }
 }

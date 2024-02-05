@@ -101,7 +101,7 @@ namespace LezzetVirtuozuApp.UIFORM.Formlar
                             lst.SubItems.Add(item.TotalCalories.ToString());
                             lst_haftalik.Items.Add(lst);
                         }
-
+                        
                         var resultMonthly = db.Products.Join(db.Meals, p => p.MealId, m => m.MealId, (p, m) => new { Products = p, Meals = m })
                                                .Join(db.Members, pm => pm.Meals.MemberId, n => n.MemberId, (pm, n) => new { ProductsMeals = pm, Members = n })
                                                .Where(x => x.ProductsMeals.Meals.MealType == (Meals)cmb_ogun.SelectedValue
@@ -198,7 +198,6 @@ namespace LezzetVirtuozuApp.UIFORM.Formlar
             }
             catch (Exception)
             {
-
                 MessageBox.Show("Lütfen Kıyas Tercihinizi Yapınız.");
             }
         }

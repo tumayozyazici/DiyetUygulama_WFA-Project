@@ -101,14 +101,18 @@ namespace LezzetVirtuozuApp.UIFORM.Formlar
             txt_soyad.Text = _member.MemberSurname;
             txt_kilo.Text = _memberDetail.Weight.ToString();
             txt_boy.Text = _memberDetail.Height.ToString();
-            txt_suTuketimi.Text = Math.Round((double)_memberDetail.WaterConsumptionNeeded, 2).ToString();
-            txt_yagOrani.Text = Math.Round((double)_memberDetail.FatRatio, 2).ToString();
+            if (_memberDetail.WaterConsumptionNeeded!=null || _memberDetail.FatRatio !=null || _memberDetail.BodyMassIndex != null)
+            {
+                txt_suTuketimi.Text = Math.Round((double)_memberDetail.WaterConsumptionNeeded, 2).ToString();
+                txt_yagOrani.Text = Math.Round((double)_memberDetail.FatRatio, 2).ToString();
+                txt_kitleEndeksi.Text = Math.Round((double)_memberDetail.BodyMassIndex, 2).ToString();
+            }
             rdb_erkek.Checked = _memberDetail.Gender == true ? true : false;
             chk_diyabetMi.Checked = _memberDetail.IsDiabetes == true ? true : false;
             dtp_dogumGunu.Value = _memberDetail.BirthDate.Value;
             cmb_alerji1.Text = _memberDetail.Allergy1.ToString();
             cmb_alerji2.Text = _memberDetail.Allergy2.ToString();
-            txt_kitleEndeksi.Text = Math.Round((double)_memberDetail.BodyMassIndex, 2).ToString(); 
+             
 
             if (!string.IsNullOrEmpty(_member.PhotoPath))
             {

@@ -23,7 +23,7 @@ namespace LezzetVirtuozuApp.UIFORM.Formlar
         IProductSERVICE _productSERVICE;
         ICategorySERVICE _categorySERVICE;
         IMealSERVICE _mealSERVICE;
-        DiyetUygulamasiContext db;
+        
         private Member _member;
 
         public FormYiyecekveIcecek(Member member)
@@ -33,8 +33,6 @@ namespace LezzetVirtuozuApp.UIFORM.Formlar
             _mealSERVICE = new MealSERVICE();
             _productSERVICE = new ProductSERVICE();
             _categorySERVICE = new CategorySERVICE();
-            db = new DiyetUygulamasiContext();
-            
             _member = member;
         }
         private void LoadThema()
@@ -64,10 +62,16 @@ namespace LezzetVirtuozuApp.UIFORM.Formlar
             var result = _productSERVICE.GetAll();
             Listele(result);
 
-            if (!db.Meals.Any(x => x.MealType == (Meals)cmb_ogun.SelectedValue && x.MealDate.Date == DateTime.Now.Date))
+            if (!_mealSERVICE.IsThereAnyWithMealDate((Meals)cmb_ogun.SelectedValue,_member.MemberId))
+            {
                 btn_guncelle.Enabled = false;
+                btn_oguneEkle.Enabled = true;
+            }
             else
+            {
                 btn_guncelle.Enabled = true;
+                btn_oguneEkle.Enabled = false;
+            }
         }
 
         private void btn_yiyecekAra_Click(object sender, EventArgs e)
@@ -143,8 +147,8 @@ namespace LezzetVirtuozuApp.UIFORM.Formlar
                 Meal meal = new Meal();
                 meal.MealType = (Meals)cmb_ogun.SelectedValue;
                 meal.MemberId = _member.MemberId;
-                db.Meals.Add(meal);
-                db.SaveChanges();
+                _mealSERVICE.Add(meal);
+
                 for (int i = 0; i < lst_urunListesi.Items.Count; i++)
                 {
                     Product product1 = new Product();
@@ -180,16 +184,21 @@ namespace LezzetVirtuozuApp.UIFORM.Formlar
 
         private void cmb_ogun_SelectedValueChanged(object sender, EventArgs e)
         {
-            if (!db.Meals.Any(x => x.MealType == (Meals)cmb_ogun.SelectedValue && x.MealDate.Date == DateTime.Now.Date))
+            if (!_mealSERVICE.IsThereAnyWithMealDate((Meals)cmb_ogun.SelectedValue, _member.MemberId))
+            {
                 btn_guncelle.Enabled = false;
+                btn_oguneEkle.Enabled = true;
+            }
             else
+            {
                 btn_guncelle.Enabled = true;
+                btn_oguneEkle.Enabled = false;
+            }
 
             lst_urunListesi.Items.Clear();
 
-            Meals selectedMealType = (Meals)cmb_ogun.SelectedValue;
-            var selectedMealIds = db.Meals.Where(m => m.MealType == selectedMealType & m.MemberId == _member.MemberId & m.MealDate.Date == DateTime.Now.Date).Select(m => m.MealId).ToList();
-            var productsInSelectedMeals = db.Products.Where(p => selectedMealIds.Contains(p.MealId)).ToList();
+            var selectedMealIds = _mealSERVICE.GetMealIdListByMealTypeDateID((Meals)cmb_ogun.SelectedValue, _member.MemberId);
+            var productsInSelectedMeals = _productSERVICE.GetWhere(x => selectedMealIds.Contains(x.MealId));
 
             if (productsInSelectedMeals != null)
             {
@@ -211,7 +220,6 @@ namespace LezzetVirtuozuApp.UIFORM.Formlar
 
             List<Product> products = _productSERVICE.GetWhere(x => x.MealId == result.MealId);
 
-            int productId = (db.Products.OrderByDescending(p => p.ProductId).FirstOrDefault()).ProductId;
             foreach (Product item in products)
             {
                 _productSERVICE.Delete(item);

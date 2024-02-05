@@ -65,10 +65,10 @@ namespace LezzetVirtuozuApp.UIFORM.Formlar
 
                     lst_sabah.Items.Add(lst);
 
-                    totalCalories += (double)item.Calories;
-                    totalProtein += (double)item.Protein;
-                    totalCarbonhydrate += (double)item.Carbonhydrate;
-                    totalFat += (double)item.Fat;
+                    totalCalories += Math.Round((double)item.Calories,2);
+                    totalProtein += Math.Round((double)item.Protein, 2);
+                    totalCarbonhydrate += Math.Round((double)item.Carbonhydrate, 2);
+                    totalFat += Math.Round((double)item.Fat, 2);
                 }
                 lbl_kaloriToplamSabah.Text = totalCalories.ToString();
                 lbl_karbonhidratToplamSabah.Text = totalCarbonhydrate.ToString();
@@ -97,10 +97,10 @@ namespace LezzetVirtuozuApp.UIFORM.Formlar
 
                     lst_ogle.Items.Add(lst);
 
-                    totalCalories += (double)item.Calories;
-                    totalProtein += (double)item.Protein;
-                    totalCarbonhydrate += (double)item.Carbonhydrate;
-                    totalFat += (double)item.Fat;
+                    totalCalories += Math.Round((double)item.Calories, 2);
+                    totalProtein += Math.Round((double)item.Protein, 2);
+                    totalCarbonhydrate += Math.Round((double)item.Carbonhydrate, 2);
+                    totalFat += Math.Round((double)item.Fat, 2);
                 }
                 lbl_kaloriToplamOgle.Text = totalCalories.ToString();
                 lbl_karbonhidratToplamOgle.Text = totalCarbonhydrate.ToString();
@@ -129,10 +129,10 @@ namespace LezzetVirtuozuApp.UIFORM.Formlar
 
                     lst_aksam.Items.Add(lst);
 
-                    totalCalories += (double)item.Calories;
-                    totalProtein += (double)item.Protein;
-                    totalCarbonhydrate += (double)item.Carbonhydrate;
-                    totalFat += (double)item.Fat;
+                    totalCalories += Math.Round((double)item.Calories, 2);
+                    totalProtein += Math.Round((double)item.Protein, 2);
+                    totalCarbonhydrate += Math.Round((double)item.Carbonhydrate, 2);
+                    totalFat += Math.Round((double)item.Fat, 2);
                 }
                 lbl_kaloriToplamAksam.Text = totalCalories.ToString();
                 lbl_karbonhidratToplamAksam.Text = totalCarbonhydrate.ToString();

@@ -48,9 +48,19 @@ namespace DiyetUygulama.SERVICE.Concrete
             return _mealREPO.GetMealByMealIdDate(meal, memberId, date);
         }
 
+        public List<int> GetMealIdListByMealTypeDateID(Meals meal, int memberId)
+        {
+            return _mealREPO.GetMealIdListByMealTypeDateID(meal, memberId);
+        }
+
         public List<Meal> GetWhere(Func<Meal, bool> expression)
         {
             return _mealREPO.GetAll().Where(expression).ToList();
+        }
+
+        public bool IsThereAnyWithMealDate(Meals meal,int memberId)
+        {
+            return _mealREPO.IsThereAnyWithMealDate(meal,memberId);
         }
 
         public int Update(Meal entity)
