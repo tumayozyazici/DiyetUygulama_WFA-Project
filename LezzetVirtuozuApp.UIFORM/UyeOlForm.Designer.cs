@@ -34,6 +34,7 @@
             label2 = new Label();
             label1 = new Label();
             panel2 = new Panel();
+            lbl_sifreGucu = new Label();
             label10 = new Label();
             pictureBox2 = new PictureBox();
             btnGiris = new Button();
@@ -44,7 +45,6 @@
             btnCikis = new Button();
             label4 = new Label();
             label3 = new Label();
-            lbl_sifreGucu = new Label();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -105,6 +105,14 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(661, 553);
             panel2.TabIndex = 5;
+            // 
+            // lbl_sifreGucu
+            // 
+            lbl_sifreGucu.AutoSize = true;
+            lbl_sifreGucu.Location = new Point(166, 350);
+            lbl_sifreGucu.Name = "lbl_sifreGucu";
+            lbl_sifreGucu.Size = new Size(0, 20);
+            lbl_sifreGucu.TabIndex = 12;
             // 
             // label10
             // 
@@ -197,9 +205,9 @@
             label4.Font = new Font("Century Gothic", 7.8F, FontStyle.Regular, GraphicsUnit.Point);
             label4.Location = new Point(571, 527);
             label4.Name = "label4";
-            label4.Size = new Size(78, 17);
+            label4.Size = new Size(79, 17);
             label4.TabIndex = 4;
-            label4.Text = "Kaan Binici";
+            label4.Text = "Grup Şurup";
             // 
             // label3
             // 
@@ -210,14 +218,6 @@
             label3.Size = new Size(80, 17);
             label3.TabIndex = 3;
             label3.Text = "Develop By";
-            // 
-            // lbl_sifreGucu
-            // 
-            lbl_sifreGucu.AutoSize = true;
-            lbl_sifreGucu.Location = new Point(166, 350);
-            lbl_sifreGucu.Name = "lbl_sifreGucu";
-            lbl_sifreGucu.Size = new Size(0, 20);
-            lbl_sifreGucu.TabIndex = 12;
             // 
             // UyeOlForm
             // 

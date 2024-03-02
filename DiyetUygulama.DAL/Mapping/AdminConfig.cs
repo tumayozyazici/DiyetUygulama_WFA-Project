@@ -17,6 +17,15 @@ namespace DiyetUygulama.DAL.Mapping
             builder.HasKey(x => x.AdminId);
             builder.Property(x => x.AdminName).IsRequired().HasColumnType("nvarchar").HasMaxLength(30);
             builder.Property(x => x.AdminSurname).IsRequired().HasColumnType("nvarchar").HasMaxLength(50);
+
+            builder.HasData(new Admin
+            {
+                AdminId = 1,
+                AdminName = "admin",
+                AdminSurname = "admin",
+                Email = "admin@admin.com",
+                Password = "password"
+            });
         }
     }
 }

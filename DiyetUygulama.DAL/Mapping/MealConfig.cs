@@ -19,6 +19,13 @@ namespace DiyetUygulama.DAL.Mapping
             builder.HasOne(x => x.Member).WithMany(x => x.Meals).HasForeignKey(x=>x.MemberId);
             builder.Property(x => x.MealType).IsRequired();
             builder.Property(x=>x.WaterConsumption).HasColumnType("integer");
+
+            builder.HasData(new Meal
+            {
+                MealId = 1,
+                MealType = DATA.Enums.Meals.Ogle,
+                MemberId = 1
+            });
         }
     }
 }

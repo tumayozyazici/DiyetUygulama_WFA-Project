@@ -193,9 +193,9 @@
             label4.Font = new Font("Century Gothic", 7.8F, FontStyle.Regular, GraphicsUnit.Point);
             label4.Location = new Point(571, 527);
             label4.Name = "label4";
-            label4.Size = new Size(78, 17);
+            label4.Size = new Size(79, 17);
             label4.TabIndex = 4;
-            label4.Text = "Kaan Binici";
+            label4.Text = "Grup Şurup";
             // 
             // label3
             // 

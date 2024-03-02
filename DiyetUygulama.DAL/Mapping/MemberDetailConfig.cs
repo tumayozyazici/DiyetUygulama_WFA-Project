@@ -23,6 +23,32 @@ namespace DiyetUygulama.DAL.Mapping
             builder.Property(x => x.FatRatio);
             builder.Property(x => x.IsDiabetes);
             builder.Ignore(x => x.Age);
+
+            builder.HasData(new MemberDetail
+            {
+                MemberDetailId = 1,
+                Gender = true,
+                Height = 180,
+                Weight = 100,
+                FatRatio = 20,
+                IsDiabetes = true,
+                Allergy1 = Allergies.Milk,
+                Allergy2 = Allergies.Egg,
+                MemberId = 1,
+                Status = BaseStatus.Deleted
+            });
+            builder.HasData(new MemberDetail
+            {
+                MemberDetailId = 2,
+                Gender = true,
+                Height = 180,
+                Weight = 100,
+                FatRatio = 20,
+                IsDiabetes = true,
+                Allergy1 = Allergies.Milk,
+                Allergy2 = Allergies.Egg,
+                MemberId = 2
+            });
         }
     }
 }
